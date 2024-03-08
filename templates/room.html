@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .video-feed {
+            position: relative;
+            width: 100%;
+            height: 500px; /* adjust as needed */
+            background-color: black; /* placeholder */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .user-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 tracking-wider leading-normal">
+    <div class="video-feed">
+        <!-- This will eventually be where the user's video feed appears -->
+        <div class="video-placeholder">Your Video Stream</div>
+    </div>
+    <div class="user-controls">
+        <button class="mute-audio bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">Mute Audio</button>
+        <button class="toggle-video bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">Toggle Video</button>
+        <button class="leave-room bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Leave Room</button>
+    </div>
+
+    <script>
+        // Here you will add the JavaScript that responds to the buttons
+        // For now, the leave-room button will navigate back to the home page
+        document.querySelector('.leave-room').addEventListener('click', function() {
+            window.location.href = '/'; // Redirects user to the home page
+        });
+
+        // You'll add more functionality here for the other buttons
+    </script>
+</body>
+</html>
